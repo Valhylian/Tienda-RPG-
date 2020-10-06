@@ -14,7 +14,7 @@ public class AlgoritmosVarios {
 		}
 		return num%10;
 	}
-	
+	//Hi
 	
 	
 	//CANTIDAD DE DIG DE UN NUMERO
