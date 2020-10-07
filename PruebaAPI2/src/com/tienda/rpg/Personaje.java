@@ -17,8 +17,7 @@ public class Personaje {
 	
 	
 	//COMRPAR
-	public static void comprar (String item) {
-		
+	public static void comprar () {
 	}
 	
 	

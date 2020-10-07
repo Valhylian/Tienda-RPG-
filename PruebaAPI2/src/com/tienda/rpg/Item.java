@@ -24,11 +24,11 @@ public class Item {
 	//LISTA DE STATS
 	public static List<String> stats = new ArrayList<>(Arrays.asList("sabiduria","destreza","carisma","fuerza","resitencia"));
 	
+	
 	//DEFINICION DEL NOMBRE DEL ITEM 
 	public static String defName(JsonObject jsonObject, int posicion, List<String> categoria) {
-		//System.out.print(jsonObject);
-		
-		int productId = jsonObject.get("productId").getAsInt();//PARAMETRO ID DE PRODUCTO
+		//PARAMETRO ID DE PRODUCTO
+		int productId = jsonObject.get("productId").getAsInt();
 		//LO TRANSFORMA SIEMPRE A POSITIVO
 		if (productId<0) {
 			productId = productId * -1;
@@ -70,36 +70,39 @@ public class Item {
 	
 	//MODIFICACION DE STATS 
 	
+	//SABIDURIA
 	public static double modSabiduria (JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("trade").getAsJsonObject().get("elementId");
 		double puntos=Double.parseDouble(value.toString());
 		return puntos * 10;
 	}
 	
+	//DESTREZA
 	public static double modDestreza (JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("view_more").getAsJsonObject().get("elementId");
 		double puntos=Double.parseDouble(value.toString());
 		return puntos * 10;
 	}
 	
+	//CARISMA
 	public static double modCarisma (JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("logistics").getAsJsonObject().get("elementId");
 		double puntos=Double.parseDouble(value.toString());
 		return puntos * 10;
 	}
 	
+	//FUERZA
 	public static double modFuerza (JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("image").getAsJsonObject().get("imgWidth");
 		double puntos=Double.parseDouble(value.toString());
 		return puntos;
 	}
 	
+	//RESISTENCIA
 	public static int modResistencia (JsonObject jsonObject) {
 		int productId = jsonObject.get("productId").getAsInt();
 		
 		int puntos = AlgoritmosVarios.cantDigitos(productId);
-		System.out.print("Aquiiiiii\n");
-		System.out.print(puntos);
 		return puntos * 10;
 	}
 }

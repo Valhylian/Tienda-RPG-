@@ -18,7 +18,8 @@ public class GUIInventario extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void initInventario() {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -35,7 +36,7 @@ public class GUIInventario extends JFrame {
 	 * Create the frame.
 	 */
 	public GUIInventario() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 197, 404);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -93,39 +94,39 @@ public class GUIInventario extends JFrame {
 		lblNewLabel_8.setBounds(123, 335, 46, 14);
 		contentPane.add(lblNewLabel_8);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton(Main.armadura1);
 		btnNewButton.setBounds(5, 59, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton button = new JButton("New button");
+		JButton button = new JButton(Main.armadura2);
 		button.setBounds(5, 93, 89, 23);
 		contentPane.add(button);
 		
-		JButton button_1 = new JButton("New button");
+		JButton button_1 = new JButton(Main.armadura3);
 		button_1.setBounds(5, 127, 89, 23);
 		contentPane.add(button_1);
 		
-		JButton button_2 = new JButton("New button");
+		JButton button_2 = new JButton(Main.arma1);
 		button_2.setBounds(5, 161, 89, 23);
 		contentPane.add(button_2);
 		
-		JButton button_3 = new JButton("New button");
+		JButton button_3 = new JButton(Main.arma2);
 		button_3.setBounds(5, 195, 89, 23);
 		contentPane.add(button_3);
 		
-		JButton button_4 = new JButton("New button");
+		JButton button_4 = new JButton(Main.arma3);
 		button_4.setBounds(5, 229, 89, 23);
 		contentPane.add(button_4);
 		
-		JButton button_5 = new JButton("New button");
+		JButton button_5 = new JButton(Main.pocima1);
 		button_5.setBounds(5, 263, 89, 23);
 		contentPane.add(button_5);
 		
-		JButton button_6 = new JButton("New button");
+		JButton button_6 = new JButton(Main.pocima2);
 		button_6.setBounds(5, 297, 89, 23);
 		contentPane.add(button_6);
 		
-		JButton button_7 = new JButton("New button");
+		JButton button_7 = new JButton(Main.pocima3);
 		button_7.setBounds(5, 331, 89, 23);
 		contentPane.add(button_7);
 	}

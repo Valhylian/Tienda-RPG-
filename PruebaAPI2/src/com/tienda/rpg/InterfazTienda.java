@@ -165,6 +165,12 @@ public class InterfazTienda extends JFrame {
 			});
 			
 			JButton btnNewButton_9 = new JButton("INVENTARIO.");
+			btnNewButton_9.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					GUIInventario.initInventario();
+				}
+			});
 			btnNewButton_9.setForeground(Color.BLACK);
 			btnNewButton_9.setBackground(Color.LIGHT_GRAY);
 			btnNewButton_9.setBounds(427, 235, 110, 42);
