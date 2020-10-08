@@ -49,7 +49,7 @@ public class Item {
 		return nombre;
 	}
 	
-	//PRECIO DE VENTA 
+	//PRECIO DE COMPRA 
 	public static double defPrecioCompra(JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("price").getAsJsonObject().get("sell_price").getAsJsonObject().get("value");
 		double precio=Double.parseDouble(value.toString());
@@ -58,7 +58,7 @@ public class Item {
 		return precio;
 	}
 	
-	//PRECIO DE COMPRA 
+	//PRECIO DE VENTA 
 	public static double defPrecioVenta(JsonObject jsonObject) {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("price").getAsJsonObject().get("sell_price").getAsJsonObject().get("value");
 		double precio=Double.parseDouble(value.toString());

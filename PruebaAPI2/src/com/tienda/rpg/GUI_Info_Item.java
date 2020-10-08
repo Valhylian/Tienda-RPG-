@@ -6,13 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.google.gson.JsonObject;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 
 public class GUI_Info_Item extends JFrame {
 
-	private JPanel contentPane;
+	private static JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -41,101 +44,190 @@ public class GUI_Info_Item extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
-		lblNewLabel.setBounds(10, 11, 97, 26);
-		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("TIPO:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1.setBounds(197, 23, 46, 14);
-		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(299, 23, 79, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblTipoTip = new JLabel("TIPO:");
+		lblTipoTip.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblTipoTip.setBounds(197, 23, 46, 14);
+		contentPane.add(lblTipoTip);
 		
-		JLabel lblNewLabel_3 = new JLabel("PRECIO VENTA:");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_3.setBounds(197, 51, 92, 14);
-		contentPane.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(299, 51, 79, 14);
-		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("EQUIPADO:");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_5.setBounds(197, 80, 79, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblPrecioTit = new JLabel("PRECIO VENTA:");
+		lblPrecioTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPrecioTit.setBounds(197, 51, 92, 14);
+		contentPane.add(lblPrecioTit);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(299, 80, 46, 14);
-		contentPane.add(lblNewLabel_6);
 		
-		JButton btnNewButton = new JButton("EQUIPAR.");
-		btnNewButton.setBounds(10, 42, 89, 23);
-		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("VENDER.");
-		btnNewButton_1.setBounds(10, 76, 89, 23);
-		contentPane.add(btnNewButton_1);
+		JLabel lblEquipadoTit = new JLabel("EQUIPADO:");
+		lblEquipadoTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblEquipadoTit.setBounds(197, 80, 79, 14);
+		contentPane.add(lblEquipadoTit);
 		
-		JLabel lblNewLabel_7 = new JLabel("MODIFICACION DE STATS:");
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_7.setBounds(10, 147, 153, 14);
-		contentPane.add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setBounds(10, 194, 71, 14);
-		contentPane.add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setBounds(10, 219, 71, 14);
-		contentPane.add(lblNewLabel_9);
+		JButton btnEquipar = new JButton("EQUIPAR.");
+		btnEquipar.setBounds(10, 42, 89, 23);
+		contentPane.add(btnEquipar);
 		
-		JLabel lblNewLabel_10 = new JLabel("STAT:");
-		lblNewLabel_10.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_10.setBounds(10, 172, 46, 14);
-		contentPane.add(lblNewLabel_10);
+		JButton btnVender = new JButton("VENDER.");
+		btnVender.setBounds(10, 76, 89, 23);
+		contentPane.add(btnVender);
 		
-		JLabel lblNewLabel_11 = new JLabel("ANTES:");
-		lblNewLabel_11.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_11.setBounds(117, 172, 46, 14);
-		contentPane.add(lblNewLabel_11);
+		JLabel lblModStatsTit = new JLabel("MODIFICACION DE STATS:");
+		lblModStatsTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblModStatsTit.setBounds(10, 147, 153, 14);
+		contentPane.add(lblModStatsTit);
 		
-		JLabel lblNewLabel_12 = new JLabel("New label");
-		lblNewLabel_12.setBounds(117, 194, 46, 14);
-		contentPane.add(lblNewLabel_12);
 		
-		JLabel lblNewLabel_13 = new JLabel("New label");
-		lblNewLabel_13.setBounds(117, 219, 46, 14);
-		contentPane.add(lblNewLabel_13);
 		
-		JLabel lblNewLabel_14 = new JLabel("    +");
-		lblNewLabel_14.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_14.setBounds(208, 172, 46, 14);
-		contentPane.add(lblNewLabel_14);
+		JLabel lblStatTit = new JLabel("STAT:");
+		lblStatTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblStatTit.setBounds(10, 172, 46, 14);
+		contentPane.add(lblStatTit);
 		
-		JLabel lblNewLabel_15 = new JLabel("New label");
-		lblNewLabel_15.setBounds(208, 194, 46, 14);
-		contentPane.add(lblNewLabel_15);
+		JLabel lblAntesTit = new JLabel("ANTES:");
+		lblAntesTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblAntesTit.setBounds(117, 172, 46, 14);
+		contentPane.add(lblAntesTit);
 		
-		JLabel lblNewLabel_16 = new JLabel("New label");
-		lblNewLabel_16.setBounds(208, 219, 46, 14);
-		contentPane.add(lblNewLabel_16);
 		
-		JLabel lblNewLabel_17 = new JLabel("DESPUES:");
-		lblNewLabel_17.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_17.setBounds(299, 172, 79, 14);
-		contentPane.add(lblNewLabel_17);
 		
-		JLabel lblNewLabel_18 = new JLabel("New label");
-		lblNewLabel_18.setBounds(299, 194, 46, 14);
-		contentPane.add(lblNewLabel_18);
+		JLabel lblMasTit = new JLabel("    +");
+		lblMasTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblMasTit.setBounds(208, 172, 46, 14);
+		contentPane.add(lblMasTit);
 		
-		JLabel lblNewLabel_19 = new JLabel("New label");
-		lblNewLabel_19.setBounds(299, 219, 46, 14);
-		contentPane.add(lblNewLabel_19);
+		
+		
+		JLabel lblDespuesTit = new JLabel("DESPUES:");
+		lblDespuesTit.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblDespuesTit.setBounds(299, 172, 79, 14);
+		contentPane.add(lblDespuesTit);
+		
+		
+	}
+	
+	public static void cargarLabelDatos (String name, String categoria, JsonObject json) {
+		//TITULO
+		JLabel lblTitulo = new JLabel(name);
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
+		lblTitulo.setBounds(10, 11, 97, 26);
+		contentPane.add(lblTitulo);
+		
+		JLabel lblTipo = new JLabel(categoria);
+		lblTipo.setBounds(299, 19, 79, 14);
+		contentPane.add(lblTipo);
+		
+		JLabel lblPrecio = new JLabel(Double.toString(Item.defPrecioVenta(json)));
+		lblPrecio.setBounds(299, 51, 79, 14);
+		contentPane.add(lblPrecio);
+		///////////////////////////////////////////////////////////
+		JLabel lblEquipado = new JLabel("New label");//FALTAAAA
+		lblEquipado.setBounds(299, 80, 46, 14);
+		contentPane.add(lblEquipado);
+		////////////////////////////////////////////////////////////
+		
+		if (categoria == "Armadura") {
+			JLabel lblStat1 = new JLabel("DESTREZA");
+			lblStat1.setBounds(10, 194, 71, 14);
+			contentPane.add(lblStat1);
+			
+			JLabel lblStat2 = new JLabel("RESISTENCIA");
+			lblStat2.setBounds(10, 219, 71, 14);
+			contentPane.add(lblStat2);
+		}
+		
+		else if (categoria == "Arma") {
+			JLabel lblStat1 = new JLabel("FUERZA");
+			lblStat1.setBounds(10, 194, 71, 14);
+			contentPane.add(lblStat1);
+			
+			JLabel lblStat2 = new JLabel("DESTREZA");
+			lblStat2.setBounds(10, 219, 71, 14);
+			contentPane.add(lblStat2);
+		}
+		
+		else if (categoria == "Pocima") {
+			JLabel lblStat1 = new JLabel("SABIDURIA");
+			lblStat1.setBounds(10, 194, 71, 14);
+			contentPane.add(lblStat1);
+			
+			JLabel lblStat2 = new JLabel("CARISMA");
+			lblStat2.setBounds(10, 219, 71, 14);
+			contentPane.add(lblStat2);
+		}
+		
+		//STATS ACTUALES
+		if (categoria == "Armadura") {
+			JLabel lblAntes1 = new JLabel(Integer.toString(Personaje.destreza));
+			lblAntes1.setBounds(117, 194, 46, 14);
+			contentPane.add(lblAntes1);
+			
+			JLabel lblAntes2 = new JLabel(Integer.toString(Personaje.resistencia));
+			lblAntes2.setBounds(117, 219, 46, 14);
+			contentPane.add(lblAntes2);	
+		}
+		
+		else if (categoria == "Arma") {
+			JLabel lblAntes1 = new JLabel(Integer.toString(Personaje.fuerza));
+			lblAntes1.setBounds(117, 194, 46, 14);
+			contentPane.add(lblAntes1);
+			
+			JLabel lblAntes2 = new JLabel(Integer.toString(Personaje.destreza));
+			lblAntes2.setBounds(117, 219, 46, 14);
+			contentPane.add(lblAntes2);
+		}
+		
+		else if (categoria == "Pocima") {
+			JLabel lblAntes1 = new JLabel(Integer.toString(Personaje.sabiduria));
+			lblAntes1.setBounds(117, 194, 46, 14);
+			contentPane.add(lblAntes1);
+			
+			JLabel lblAntes2 = new JLabel(Integer.toString(Personaje.carisma));
+			lblAntes2.setBounds(117, 219, 46, 14);
+			contentPane.add(lblAntes2);
+		}
+		
+		//MOD PUNTOS DE STATS
+		if (categoria == "Armadura") {
+			JLabel lblMas1 = new JLabel(Double.toString(Item.modDestreza(json)));
+			lblMas1.setBounds(208, 194, 46, 14);
+			contentPane.add(lblMas1);
+			
+			JLabel lblMas2 = new JLabel(Integer.toString(Item.modResistencia(json)));
+			lblMas2.setBounds(208, 219, 46, 14);
+			contentPane.add(lblMas2);
+		}
+		
+		else if (categoria == "Arma") {
+			JLabel lblMas1 = new JLabel(Double.toString(Item.modFuerza(json)));
+			lblMas1.setBounds(208, 194, 46, 14);
+			contentPane.add(lblMas1);
+			
+			JLabel lblMas2 = new JLabel(Double.toString(Item.modDestreza(json)));
+			lblMas2.setBounds(208, 219, 46, 14);
+			contentPane.add(lblMas2);
+		}
+		
+		else if (categoria == "Pocima") {
+			JLabel lblMas1 = new JLabel(Double.toString(Item.modSabiduria(json)));
+			lblMas1.setBounds(208, 194, 46, 14);
+			contentPane.add(lblMas1);
+			
+			JLabel lblMas2 = new JLabel(Double.toString(Item.modCarisma(json)));
+			lblMas2.setBounds(208, 219, 46, 14);
+			contentPane.add(lblMas2);
+		}
+		
+		//SUMA (AFECTACION DE STATS)
+		JLabel lblDesp1 = new JLabel("New label");
+		lblDesp1.setBounds(299, 194, 46, 14);
+		contentPane.add(lblDesp1);
+		
+		JLabel lblDesp2 = new JLabel("New label");
+		lblDesp2.setBounds(299, 219, 46, 14);
+		contentPane.add(lblDesp2);
 	}
 }
