@@ -168,7 +168,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_9.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					GUIInventario.initInventario();
+					GUIInventario.initInventario(json1,json2,json3,json4,json5,json6,json7,json8,json9);
 				}
 			});
 			btnNewButton_9.setForeground(Color.BLACK);

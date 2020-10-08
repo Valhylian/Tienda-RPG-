@@ -63,7 +63,7 @@ public class Item {
 		JsonElement value = jsonObject.get("productElements").getAsJsonObject().get("price").getAsJsonObject().get("sell_price").getAsJsonObject().get("value");
 		double precio=Double.parseDouble(value.toString());
 		
-		precio = (precio*0.5)+precio;
+		precio = precio/2;
 		System.out.println(precio);
 		return precio;
 	}

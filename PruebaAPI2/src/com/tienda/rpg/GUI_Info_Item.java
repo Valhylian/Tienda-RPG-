@@ -20,11 +20,12 @@ public class GUI_Info_Item extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void inicializador (String name, String categoria, JsonObject json) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					GUI_Info_Item frame = new GUI_Info_Item();
+					cargarLabelDatos (name, categoria, json);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,35 +38,27 @@ public class GUI_Info_Item extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI_Info_Item() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		
-		
 		JLabel lblTipoTip = new JLabel("TIPO:");
 		lblTipoTip.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblTipoTip.setBounds(197, 23, 46, 14);
 		contentPane.add(lblTipoTip);
-		
-		
-		
+	
 		JLabel lblPrecioTit = new JLabel("PRECIO VENTA:");
 		lblPrecioTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrecioTit.setBounds(197, 51, 92, 14);
 		contentPane.add(lblPrecioTit);
 		
-		
-		
 		JLabel lblEquipadoTit = new JLabel("EQUIPADO:");
 		lblEquipadoTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblEquipadoTit.setBounds(197, 80, 79, 14);
 		contentPane.add(lblEquipadoTit);
-		
-		
 		
 		JButton btnEquipar = new JButton("EQUIPAR.");
 		btnEquipar.setBounds(10, 42, 89, 23);
@@ -80,8 +73,6 @@ public class GUI_Info_Item extends JFrame {
 		lblModStatsTit.setBounds(10, 147, 153, 14);
 		contentPane.add(lblModStatsTit);
 		
-		
-		
 		JLabel lblStatTit = new JLabel("STAT:");
 		lblStatTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblStatTit.setBounds(10, 172, 46, 14);
@@ -92,22 +83,17 @@ public class GUI_Info_Item extends JFrame {
 		lblAntesTit.setBounds(117, 172, 46, 14);
 		contentPane.add(lblAntesTit);
 		
-		
-		
 		JLabel lblMasTit = new JLabel("    +");
 		lblMasTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblMasTit.setBounds(208, 172, 46, 14);
 		contentPane.add(lblMasTit);
 		
-		
-		
 		JLabel lblDespuesTit = new JLabel("DESPUES:");
 		lblDespuesTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblDespuesTit.setBounds(299, 172, 79, 14);
 		contentPane.add(lblDespuesTit);
-		
-		
 	}
+	
 	
 	public static void cargarLabelDatos (String name, String categoria, JsonObject json) {
 		//TITULO
@@ -222,12 +208,37 @@ public class GUI_Info_Item extends JFrame {
 		}
 		
 		//SUMA (AFECTACION DE STATS)
-		JLabel lblDesp1 = new JLabel("New label");
-		lblDesp1.setBounds(299, 194, 46, 14);
-		contentPane.add(lblDesp1);
+		if (categoria == "Armadura") {
+			JLabel lblDesp1 = new JLabel(Double.toString(Item.modDestreza(json)+Personaje.destreza));
+			lblDesp1.setBounds(299, 194, 46, 14);
+			contentPane.add(lblDesp1);
+			
+			JLabel lblDesp2 = new JLabel(Integer.toString(Item.modResistencia(json)+Personaje.resistencia));
+			lblDesp2.setBounds(299, 219, 46, 14);
+			contentPane.add(lblDesp2);
+		}
 		
-		JLabel lblDesp2 = new JLabel("New label");
-		lblDesp2.setBounds(299, 219, 46, 14);
-		contentPane.add(lblDesp2);
+		else if (categoria == "Arma") {
+			JLabel lblDesp1 = new JLabel(Double.toString(Item.modFuerza(json)+Personaje.fuerza));
+			lblDesp1.setBounds(299, 194, 46, 14);
+			contentPane.add(lblDesp1);
+			
+			JLabel lblDesp2 = new JLabel(Double.toString(Item.modDestreza(json)+Personaje.destreza));
+			lblDesp2.setBounds(299, 219, 46, 14);
+			contentPane.add(lblDesp2);
+		}
+		
+		else if (categoria == "Pocima") {
+			JLabel lblDesp1 = new JLabel(Double.toString(Item.modSabiduria(json)+Personaje.sabiduria));
+			lblDesp1.setBounds(299, 194, 46, 14);
+			contentPane.add(lblDesp1);
+			
+			JLabel lblDesp2 = new JLabel(Double.toString(Item.modCarisma(json)+Personaje.carisma));
+			lblDesp2.setBounds(299, 219, 46, 14);
+			contentPane.add(lblDesp2);
+
+		}
+		
+		
 	}
 }
