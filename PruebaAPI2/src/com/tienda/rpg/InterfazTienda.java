@@ -233,7 +233,7 @@ public class InterfazTienda extends JFrame {
 			label.setBounds(374, 302, 9, 14);
 			frame.getContentPane().add(label);
 			
-			JLabel lblNewLabel_5 = new JLabel(Integer.toString( Personaje.dinero));
+			JLabel lblNewLabel_5 = new JLabel(Double.toString( Personaje.dinero));
 			lblNewLabel_5.setBounds(393, 304, 46, 14);
 			frame.getContentPane().add(lblNewLabel_5);
 		}

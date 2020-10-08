@@ -13,7 +13,7 @@ public class Personaje {
 	public static int resistencia = 300;;
 
 	//DINERO
-	public static int dinero = 2000;
+	public static double dinero = 2000;
 	
 	
 	//COMRPAR
