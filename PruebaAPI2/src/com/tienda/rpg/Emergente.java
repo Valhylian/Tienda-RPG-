@@ -19,12 +19,12 @@ public class Emergente extends JFrame {
 
 public static JPanel contentPane;
 	
-	public static EventQueue inicializador (String nombre,String categoria, String stat1, String stat2, JsonObject json) {
+	public static EventQueue inicializador (String nombre,String categoria, String stat1, String stat2, JsonObject json, int item) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Emergente frame = new Emergente();
-					labels (nombre, categoria,stat1, stat2,json);
+					labels (nombre, categoria,stat1, stat2,json,item);
 					frame.setVisible(true);
 					
 				} catch (Exception e) {
@@ -36,7 +36,7 @@ public static JPanel contentPane;
 	}
 	
 	
-	public static void labels (String Prueba, String categoria, String stat1, String stat2, JsonObject json) {
+	public static void labels (String Prueba, String categoria, String stat1, String stat2, JsonObject json, int item) {
 		JLabel lblItem = new JLabel(Prueba);
 		lblItem.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		lblItem.setBounds(10, 11, 119, 27);
@@ -53,6 +53,12 @@ public static JPanel contentPane;
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("Comprar");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				 Personaje.comprar(item, Item.defPrecioCompra(json));
+			}
+		});
 		btnNewButton.setBounds(10, 49, 89, 23);
 		contentPane.add(btnNewButton);
 		

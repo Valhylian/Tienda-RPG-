@@ -74,7 +74,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					 Emergente.inicializador(Main.armadura1, "Armadura", "Resistencia","Destreza", json1);
+					 Emergente.inicializador(Main.armadura1, "Armadura", "Resistencia","Destreza", json1,1);
 				}
 			});
 			btnNewButton.setBounds(10, 74, 119, 25);
@@ -85,7 +85,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_1.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.armadura2, "Armadura", "Resistencia","Destreza", json2);
+					Emergente.inicializador(Main.armadura2, "Armadura", "Resistencia","Destreza", json2,2);
 				}
 			});
 			btnNewButton_1.setBounds(10, 110, 119, 23);
@@ -97,7 +97,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_2.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.armadura3, "Armadura", "Resistencia","Destreza", json3);
+					Emergente.inicializador(Main.armadura3, "Armadura", "Resistencia","Destreza", json3,3);
 				}
 			});
 			btnNewButton_2.setBounds(10, 144, 119, 23);
@@ -109,7 +109,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_3.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.arma1, "Arma", "Fuerza","Destreza", json4);
+					Emergente.inicializador(Main.arma1, "Arma", "Fuerza","Destreza", json4,4);
 				}
 			});
 			
@@ -119,7 +119,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_4.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.arma2, "Arma", "Fuerza","Destreza", json5);
+					Emergente.inicializador(Main.arma2, "Arma", "Fuerza","Destreza", json5,5);
 				}
 			});
 			
@@ -129,7 +129,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_5.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.arma3, "Arma", "Fuerza","Destreza", json6);
+					Emergente.inicializador(Main.arma3, "Arma", "Fuerza","Destreza", json6,6);
 				}
 			});
 			
@@ -140,7 +140,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_6.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.pocima1, "Pocima", "Sabiduria","Carsima", json7);
+					Emergente.inicializador(Main.pocima1, "Pocima", "Sabiduria","Carsima", json7,7);
 				}
 			});
 			
@@ -150,7 +150,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_7.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.pocima2, "Pocima", "Sabiduria","Carsima", json8);
+					Emergente.inicializador(Main.pocima2, "Pocima", "Sabiduria","Carsima", json8,8);
 				}
 			});
 			
@@ -160,7 +160,7 @@ public class InterfazTienda extends JFrame {
 			btnNewButton_8.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Emergente.inicializador(Main.pocima3, "Pocima", "Sabiduria","Carsima", json9);
+					Emergente.inicializador(Main.pocima3, "Pocima", "Sabiduria","Carsima", json9,9);
 				}
 			});
 			

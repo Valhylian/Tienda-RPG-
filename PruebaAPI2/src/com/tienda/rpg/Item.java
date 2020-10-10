@@ -24,6 +24,7 @@ public class Item {
 		name = nombre;
 		cantidad = cant;
 	}
+	
 	//LISTAS PARA ELECCION DEL NOMBRE
 	public static List<String> armaduras = new ArrayList<>(Arrays.asList("Almete","Rajoy","Almofar","Alsebergo","Gambax","Merkel","armadura4","armadura3","armadura2","armadura1","armadura0"));
 	public static List<String> armas = new ArrayList<>(Arrays.asList("Agarth","Xalatath","Dardo","Angrist","Sucsamad","Zinrokh","arma3","arma2","arma1","arma0"));

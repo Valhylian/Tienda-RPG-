@@ -1,15 +1,15 @@
 package com.tienda.rpg;
 
 public class Inventario {
-	public static int cantArmadura1;
-	public static int cantArmadura2;
-	public static int cantArmadura3;
-	public static int cantArma1;
-	public static int cantArma2;
-	public static int cantArma3;
-	public static int cantIPocima1;
-	public static int cantIPocima2;
-	public static int cantIPocima3;
+	public static int cantArmadura1 = 0;
+	public static int cantArmadura2=1;
+	public static int cantArmadura3=2;
+	public static int cantArma1=3;
+	public static int cantArma2=4;
+	public static int cantArma3=5;
+	public static int cantIPocima1=6;
+	public static int cantIPocima2=7;
+	public static int cantIPocima3=8;
 	
 	//ITEMS EQUIPADOS
 	public static boolean[] equiArmaduras = {false,false,false};

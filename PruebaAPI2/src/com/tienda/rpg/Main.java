@@ -67,6 +67,7 @@ public class Main {
 				Main.pocima2 = Item.defName(jsonObject8, 1, Item.pocimas);
 				Main.pocima3 = Item.defName(jsonObject9, 2, Item.pocimas);
 				
+				
 				/*EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {

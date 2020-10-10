@@ -65,39 +65,39 @@ public class GUIInventario extends JFrame {
 		lblCant.setBounds(133, 34, 46, 14);
 		contentPane.add(lblCant);
 		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel(Integer.toString(Inventario.cantArmadura1));
 		lblNewLabel.setBounds(123, 63, 46, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
+		JLabel lblNewLabel_1 = new JLabel(Integer.toString(Inventario.cantArmadura2));
 		lblNewLabel_1.setBounds(123, 97, 46, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
+		JLabel lblNewLabel_2 = new JLabel(Integer.toString(Inventario.cantArmadura3));
 		lblNewLabel_2.setBounds(123, 131, 46, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
+		JLabel lblNewLabel_3 = new JLabel(Integer.toString(Inventario.cantArma1));
 		lblNewLabel_3.setBounds(123, 165, 46, 14);
 		contentPane.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
+		JLabel lblNewLabel_4 = new JLabel(Integer.toString(Inventario.cantArma2));
 		lblNewLabel_4.setBounds(123, 199, 46, 14);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
+		JLabel lblNewLabel_5 = new JLabel(Integer.toString(Inventario.cantArma3));
 		lblNewLabel_5.setBounds(123, 233, 46, 14);
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
+		JLabel lblNewLabel_6 = new JLabel(Integer.toString(Inventario.cantIPocima1));
 		lblNewLabel_6.setBounds(123, 267, 46, 14);
 		contentPane.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_7 = new JLabel("New label");
+		JLabel lblNewLabel_7 = new JLabel(Integer.toString(Inventario.cantIPocima2));
 		lblNewLabel_7.setBounds(123, 301, 46, 14);
 		contentPane.add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
+		JLabel lblNewLabel_8 = new JLabel(Integer.toString(Inventario.cantIPocima3));
 		lblNewLabel_8.setBounds(123, 335, 46, 14);
 		contentPane.add(lblNewLabel_8);
 		
