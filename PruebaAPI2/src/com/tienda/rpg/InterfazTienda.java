@@ -15,7 +15,7 @@ import java.awt.event.*;
 
 public class InterfazTienda extends JFrame {
 
-		JFrame frame;
+		static JFrame frame;
 		
 		public static void init(JsonObject json1,JsonObject json2,JsonObject json3,JsonObject json4,JsonObject json5,JsonObject json6,JsonObject json7,JsonObject json8,JsonObject json9) {
 			EventQueue.invokeLater(new Runnable() {
@@ -208,6 +208,12 @@ public class InterfazTienda extends JFrame {
 			lblResistencia.setBounds(182, 249, 82, 14);
 			frame.getContentPane().add(lblResistencia);
 			
+			actStats ();
+			
+			
+		}
+		
+		public static void actStats () {
 			JLabel statSabiduria = new JLabel(Integer.toString( Personaje.sabiduria));
 			statSabiduria.setBounds(83, 214, 46, 14);
 			frame.getContentPane().add(statSabiduria);

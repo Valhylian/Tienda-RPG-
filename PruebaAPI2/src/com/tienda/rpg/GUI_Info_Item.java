@@ -136,9 +136,22 @@ public class GUI_Info_Item extends JFrame {
 		contentPane.add(btnVender);
 		
 		///////////////////////////////////////////////////////////
-		JLabel lblEquipado = new JLabel("New label");//FALTAAAA
-		lblEquipado.setBounds(299, 80, 46, 14);
-		contentPane.add(lblEquipado);
+		if (item==1 | item==2 | item==3) {
+			JLabel lblEquipado = new JLabel(Boolean.toString(Inventario.equiArmaduras[item-1]));//FALTAAAA
+			lblEquipado.setBounds(299, 80, 46, 14);
+			contentPane.add(lblEquipado);
+		}
+		else if (item==4 | item==5 | item==6) {
+			JLabel lblEquipado = new JLabel(Boolean.toString(Inventario.equiArmas[item-4]));//FALTAAAA
+			lblEquipado.setBounds(299, 80, 46, 14);
+			contentPane.add(lblEquipado);
+		}
+		else if (item==7 | item==8 | item==9) {
+			JLabel lblEquipado = new JLabel(Boolean.toString(Inventario.equiPocimas[item-7]));//FALTAAAA
+			lblEquipado.setBounds(299, 80, 46, 14);
+			contentPane.add(lblEquipado);
+		}
+		
 		////////////////////////////////////////////////////////////
 		
 		if (categoria == "Armadura") {
