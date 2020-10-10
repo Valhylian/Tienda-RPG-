@@ -340,7 +340,7 @@ public class Personaje {
 				}
 		}
 		
-		InterfazTienda.actStats ();
+		
 		return 0;
 	}
 
@@ -365,6 +365,6 @@ public class Personaje {
 			JOptionPane.showMessageDialog(null, "ARMA DESQUIPADA");
 				}
 		}
-		InterfazTienda.actStats ();
+		
 	}
 }

@@ -171,18 +171,29 @@ public class InterfazTienda extends JFrame {
 					GUIInventario.initInventario(json1,json2,json3,json4,json5,json6,json7,json8,json9);
 				}
 			});
-			btnNewButton_9.setForeground(Color.BLACK);
-			btnNewButton_9.setBackground(Color.LIGHT_GRAY);
-			btnNewButton_9.setBounds(427, 235, 110, 42);
+			//btnNewButton_9.setForeground(Color.BLACK);
+			//btnNewButton_9.setBackground(Color.LIGHT_GRAY);
+			btnNewButton_9.setBounds(156, 255, 110, 42);
 			frame.getContentPane().add(btnNewButton_9);
+			
+			JButton viewStats = new JButton("VER STATS.");
+			viewStats.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					 ViewStats.preView();
+				}
+			});
+			viewStats.setBounds(15, 255, 110, 42);
+			frame.getContentPane().add(viewStats);
 			
 			JLabel lblNewLabel_4 = new JLabel("Drathel");
 			lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_4.setVerticalAlignment(SwingConstants.BOTTOM);
-			lblNewLabel_4.setFont(new Font("Yu Gothic", Font.BOLD, 14));
-			lblNewLabel_4.setBounds(10, 178, 112, 25);
+			lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblNewLabel_4.setBounds(10, 210, 112, 25);
 			frame.getContentPane().add(lblNewLabel_4);
 			
+			/*
 			JLabel lblSabiduria = new JLabel("SABIDURIA");
 			lblSabiduria.setFont(new Font("Tahoma", Font.BOLD, 11));
 			lblSabiduria.setBounds(10, 214, 82, 14);
@@ -208,12 +219,6 @@ public class InterfazTienda extends JFrame {
 			lblResistencia.setBounds(182, 249, 82, 14);
 			frame.getContentPane().add(lblResistencia);
 			
-			actStats ();
-			
-			
-		}
-		
-		public static void actStats () {
 			JLabel statSabiduria = new JLabel(Integer.toString( Personaje.sabiduria));
 			statSabiduria.setBounds(83, 214, 46, 14);
 			frame.getContentPane().add(statSabiduria);
@@ -242,5 +247,12 @@ public class InterfazTienda extends JFrame {
 			JLabel lblNewLabel_5 = new JLabel(Double.toString( Personaje.dinero));
 			lblNewLabel_5.setBounds(393, 304, 46, 14);
 			frame.getContentPane().add(lblNewLabel_5);
+			*/
+			
+		
+			
+			
 		}
+		
+		
 	}
