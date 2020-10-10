@@ -11,11 +11,19 @@ import com.google.gson.JsonParser;
 
 public class Item {
 
-	public int precioCompra;
-	public int precioVenta;
+	public double precioCompra;
+	public double precioVenta;
 	public String categoria;
 	public String name;
+	public int cantidad;
 	
+	public Item(double venta, double compra, String categ, String nombre, int cant) {
+		precioCompra = compra;
+		precioVenta = venta;
+		categoria = categ;
+		name = nombre;
+		cantidad = cant;
+	}
 	//LISTAS PARA ELECCION DEL NOMBRE
 	public static List<String> armaduras = new ArrayList<>(Arrays.asList("Almete","Rajoy","Almofar","Alsebergo","Gambax","Merkel","armadura4","armadura3","armadura2","armadura1","armadura0"));
 	public static List<String> armas = new ArrayList<>(Arrays.asList("Agarth","Xalatath","Dardo","Angrist","Sucsamad","Zinrokh","arma3","arma2","arma1","arma0"));
