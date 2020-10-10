@@ -114,4 +114,91 @@ public class Item {
 		int puntos = AlgoritmosVarios.cantDigitos(productId);
 		return puntos * 10;
 	}
+	
+	//MOD STATS
+	public static void modStats (int item, JsonObject json) {
+		switch (item) 
+        {
+            case 1:  Personaje.destreza += Item.modDestreza(json);
+            		 Personaje.resistencia += Item.modResistencia(json);
+            		 System.out.print("DESTREZA Y RESISTENCIA");
+            		 System.out.print(Personaje.destreza);
+            		 System.out.print(Personaje.resistencia);
+                     break;
+            case 2:  Personaje.destreza += Item.modDestreza(json);
+   		 			 Personaje.resistencia += Item.modResistencia(json);
+   		 			 System.out.print("DESTREZA Y RESISTENCIA");
+	           		 System.out.print(Personaje.destreza);
+	           		 System.out.print(Personaje.resistencia);
+                     break;
+            case 3:  Personaje.destreza += Item.modDestreza(json);
+	 			 	 Personaje.resistencia += Item.modResistencia(json);
+                     break;
+            case 4:  Personaje.destreza += Item.modDestreza(json);
+		 	 		 Personaje.fuerza += Item.modFuerza(json);
+                     break;
+            case 5:  Personaje.destreza += Item.modDestreza(json);
+	 		 		 Personaje.fuerza += Item.modFuerza(json);
+                     break;
+            case 6:  Personaje.destreza += Item.modDestreza(json);
+	 		 		 Personaje.fuerza += Item.modFuerza(json);
+                     break;
+            case 7:  Personaje.sabiduria += Item.modSabiduria(json);
+	 		 	 	 Personaje.carisma += Item.modCarisma(json);
+                     break;
+            case 8:  Personaje.sabiduria += Item.modSabiduria(json);
+			 	 	 Personaje.carisma += Item.modCarisma(json);
+		             break;
+            case 9:  Personaje.sabiduria += Item.modSabiduria(json);
+			 	 	 Personaje.carisma += Item.modCarisma(json);
+		             break;
+         
+            default: Personaje.sabiduria += Item.modSabiduria(json);
+			 	 	 Personaje.carisma += Item.modCarisma(json);
+		             break;
+        }
+	}
+	
+	public static void modStatsInversos (int item, JsonObject json) {
+		switch (item) 
+        {
+            case 1:  Personaje.destreza -= Item.modDestreza(json);
+            		 Personaje.resistencia -= Item.modResistencia(json);
+            		 System.out.print("DESTREZA Y RESISTENCIA");
+	           		 System.out.print(Personaje.destreza);
+	           		 System.out.print(Personaje.resistencia);
+                     break;
+            case 2:  Personaje.destreza -= Item.modDestreza(json);
+   		 			 Personaje.resistencia -= Item.modResistencia(json);
+   		 			System.out.print("DESTREZA Y RESISTENCIA");
+	           		 System.out.print(Personaje.destreza);
+	           		 System.out.print(Personaje.resistencia);
+                     break;
+            case 3:  Personaje.destreza -= Item.modDestreza(json);
+	 			 	 Personaje.resistencia -= Item.modResistencia(json);
+                     break;
+            case 4:  Personaje.destreza -= Item.modDestreza(json);
+		 	 		 Personaje.fuerza -= Item.modFuerza(json);
+                     break;
+            case 5:  Personaje.destreza -= Item.modDestreza(json);
+	 		 		 Personaje.fuerza -= Item.modFuerza(json);
+                     break;
+            case 6:  Personaje.destreza -= Item.modDestreza(json);
+	 		 		 Personaje.fuerza -= Item.modFuerza(json);
+                     break;
+            case 7:  Personaje.sabiduria -= Item.modSabiduria(json);
+	 		 	 	 Personaje.carisma -= Item.modCarisma(json);
+                     break;
+            case 8:  Personaje.sabiduria -= Item.modSabiduria(json);
+			 	 	 Personaje.carisma -= Item.modCarisma(json);
+		             break;
+            case 9:  Personaje.sabiduria -= Item.modSabiduria(json);
+			 	 	 Personaje.carisma -= Item.modCarisma(json);
+		             break;
+         
+            default: Personaje.sabiduria -= Item.modSabiduria(json);
+			 	 	 Personaje.carisma -= Item.modCarisma(json);
+		             break;
+        }
+	}
 }

@@ -11,6 +11,9 @@ import com.google.gson.JsonObject;
 
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JButton;
 
 public class GUI_Info_Item extends JFrame {
@@ -20,12 +23,12 @@ public class GUI_Info_Item extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void inicializador (String name, String categoria, JsonObject json) {
+	public static void inicializador (String name, String categoria, JsonObject json, int item) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					GUI_Info_Item frame = new GUI_Info_Item();
-					cargarLabelDatos (name, categoria, json);
+					cargarLabelDatos (name, categoria, json,item);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -60,14 +63,6 @@ public class GUI_Info_Item extends JFrame {
 		lblEquipadoTit.setBounds(197, 80, 79, 14);
 		contentPane.add(lblEquipadoTit);
 		
-		JButton btnEquipar = new JButton("EQUIPAR.");
-		btnEquipar.setBounds(10, 42, 89, 23);
-		contentPane.add(btnEquipar);
-		
-		JButton btnVender = new JButton("VENDER.");
-		btnVender.setBounds(10, 76, 89, 23);
-		contentPane.add(btnVender);
-		
 		JLabel lblModStatsTit = new JLabel("MODIFICACION DE STATS:");
 		lblModStatsTit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblModStatsTit.setBounds(10, 147, 153, 14);
@@ -95,12 +90,32 @@ public class GUI_Info_Item extends JFrame {
 	}
 	
 	
-	public static void cargarLabelDatos (String name, String categoria, JsonObject json) {
+	public static void cargarLabelDatos (String name, String categoria, JsonObject json, int item) {
 		//TITULO
 		JLabel lblTitulo = new JLabel(name);
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		lblTitulo.setBounds(10, 11, 97, 26);
 		contentPane.add(lblTitulo);
+		
+		JButton btnEquipar = new JButton("EQUIPAR.");
+		btnEquipar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				 Personaje.equipar(item, json);
+			}
+		});
+		btnEquipar.setBounds(10, 42, 89, 23);
+		contentPane.add(btnEquipar);
+		
+		JButton btnDesequipar = new JButton("DESEQUIPAR.");
+		btnDesequipar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				 Personaje.desequipar(item, json);
+			}
+		});
+		btnDesequipar.setBounds(10, 113, 89, 23);
+		contentPane.add(btnDesequipar);
 		
 		JLabel lblTipo = new JLabel(categoria);
 		lblTipo.setBounds(299, 19, 79, 14);
@@ -109,6 +124,17 @@ public class GUI_Info_Item extends JFrame {
 		JLabel lblPrecio = new JLabel(Double.toString(Item.defPrecioVenta(json)));
 		lblPrecio.setBounds(299, 51, 79, 14);
 		contentPane.add(lblPrecio);
+		
+		JButton btnVender = new JButton("VENDER.");
+		btnVender.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Personaje.vender(item, Item.defPrecioVenta(json));
+			}
+		});
+		btnVender.setBounds(10, 76, 89, 23);
+		contentPane.add(btnVender);
+		
 		///////////////////////////////////////////////////////////
 		JLabel lblEquipado = new JLabel("New label");//FALTAAAA
 		lblEquipado.setBounds(299, 80, 46, 14);

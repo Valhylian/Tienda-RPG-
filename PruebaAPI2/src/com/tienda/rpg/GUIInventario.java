@@ -109,7 +109,7 @@ public class GUIInventario extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.armadura1, "Armadura", json1);
+				GUI_Info_Item.inicializador(Main.armadura1, "Armadura", json1,1);
 			}
 		});
 		btnNewButton.setBounds(5, 59, 89, 23);
@@ -119,7 +119,7 @@ public class GUIInventario extends JFrame {
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.armadura2, "Armadura", json2);
+				GUI_Info_Item.inicializador(Main.armadura2, "Armadura", json2,2);
 			}
 		});
 		button.setBounds(5, 93, 89, 23);
@@ -129,7 +129,7 @@ public class GUIInventario extends JFrame {
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.armadura3, "Armadura", json3);
+				GUI_Info_Item.inicializador(Main.armadura3, "Armadura", json3,3);
 			}
 		});
 		button_1.setBounds(5, 127, 89, 23);
@@ -139,7 +139,7 @@ public class GUIInventario extends JFrame {
 		button_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.arma1, "Arma", json4);
+				GUI_Info_Item.inicializador(Main.arma1, "Arma", json4,4);
 			}
 		});
 		button_2.setBounds(5, 161, 89, 23);
@@ -149,7 +149,7 @@ public class GUIInventario extends JFrame {
 		button_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.arma2, "Arma", json5);
+				GUI_Info_Item.inicializador(Main.arma2, "Arma", json5,5);
 			}
 		});
 		button_3.setBounds(5, 195, 89, 23);
@@ -159,7 +159,7 @@ public class GUIInventario extends JFrame {
 		button_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.arma3, "Arma", json6);
+				GUI_Info_Item.inicializador(Main.arma3, "Arma", json6,6);
 			}
 		});
 		button_4.setBounds(5, 229, 89, 23);
@@ -169,7 +169,7 @@ public class GUIInventario extends JFrame {
 		button_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.pocima1, "Pocima", json7);
+				GUI_Info_Item.inicializador(Main.pocima1, "Pocima", json7,7);
 			}
 		});
 		button_5.setBounds(5, 263, 89, 23);
@@ -179,7 +179,7 @@ public class GUIInventario extends JFrame {
 		button_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.pocima2, "Pocima", json8);
+				GUI_Info_Item.inicializador(Main.pocima2, "Pocima", json8,8);
 			}
 		});
 		button_6.setBounds(5, 297, 89, 23);
@@ -189,7 +189,7 @@ public class GUIInventario extends JFrame {
 		button_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				GUI_Info_Item.inicializador(Main.pocima3, "Pocima", json9);
+				GUI_Info_Item.inicializador(Main.pocima3, "Pocima", json9,9);
 			}
 		});
 		button_7.setBounds(5, 331, 89, 23);
