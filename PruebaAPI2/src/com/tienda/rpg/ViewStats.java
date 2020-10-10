@@ -87,11 +87,11 @@ public class ViewStats extends JFrame {
 		
 		JLabel label = new JLabel("$");
 		label.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label.setBounds(10, 239, 20, 32);
+		label.setBounds(10, 215, 20, 32);
 		contentPane.add(label);
 		
 		JLabel lblNewLabel_5 = new JLabel(Double.toString( Personaje.dinero));
-		lblNewLabel_5.setBounds(40, 251, 46, 14);
+		lblNewLabel_5.setBounds(40, 227, 46, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel = new JLabel("INFORMACION DEL PERSONAJE.");
