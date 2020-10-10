@@ -25,26 +25,36 @@ public class Personaje {
 			switch (item) 
 	        {
 	            case 1:  Inventario.cantArmadura1 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 2:  Inventario.cantArmadura2 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 3:  Inventario.cantArmadura3 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 4:  Inventario.cantArma1 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 5:  Inventario.cantArma2 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 6:  Inventario.cantArma3 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 7:  Inventario.cantIPocima1 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	            case 8:  Inventario.cantIPocima2 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	            		 break;
 	            
 	            case 9:  Inventario.cantIPocima3 += 1;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	            		 break;
 	            
 	            default: Inventario.cantIPocima1 += 0;
+	            JOptionPane.showMessageDialog(null, "ITEM COMPRADO!");
 	                     break;
 	        }
 			System.out.print(Personaje.dinero);
@@ -60,69 +70,88 @@ public class Personaje {
 	public static void vender (int item, double price) {
 		switch (item) 
         {
-            case 1:  if (Inventario.cantArmadura1>=1) {
-            		Inventario.cantArmadura1 -=1;
-            		Personaje.dinero += price;
-            		}
-            		
+            case 1: if (Inventario.equiArmaduras[item-1]==true) {
+		            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+		            }
+		            else if (Inventario.cantArmadura1>=1) {
+		            		Inventario.cantArmadura1 -=1;
+		            		Personaje.dinero += price;
+		            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+		            }
 		            else {
 		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
 		            }
                      break;
                      
-            case 2:  if (Inventario.cantArmadura2>=1) {
-	        		Inventario.cantArmadura2 -=1;
-	        		Personaje.dinero += price;
-	        		}
-	        		
-		            else {
-		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
-		            }
-	                 break;
+            case 2:  if (Inventario.equiArmaduras[item-1]==true) {
+			            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+			            }
+			            else if (Inventario.cantArmadura2>=1) {
+			            		Inventario.cantArmadura2 -=1;
+			            		Personaje.dinero += price;
+			            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+			            }
+			            else {
+			            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
+			            }
+			             break;
 	                 
-            case 3:  if (Inventario.cantArmadura3>=1) {
-	        		Inventario.cantArmadura3 -=1;
-	        		Personaje.dinero += price;
-	        		}
-	        		
+            case 3:  if (Inventario.equiArmaduras[item-1]==true) {
+		            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+		            }
+		            else if (Inventario.cantArmadura3>=1) {
+		            		Inventario.cantArmadura3 -=1;
+		            		Personaje.dinero += price;
+		            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+		            }
 		            else {
 		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
 		            }
-	                 break;
+		             break;
 	                 
-            case 4:  if (Inventario.cantArma1>=1) {
-	        		Inventario.cantArma1 -=1;
-	        		Personaje.dinero += price;
-	        		}
-	        		
+            case 4:  if (Inventario.equiArmas[item-4]==true) {
+		            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+		            }
+		            else if (Inventario.cantArma1>=1) {
+		            		Inventario.cantArma1 -=1;
+		            		Personaje.dinero += price;
+		            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+		            }
 		            else {
 		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
 		            }
-	                 break;
+		             break;
 	                 
-            case 5:  if (Inventario.cantArma2>=1) {
-	        		Inventario.cantArma2 -=1;
-	        		Personaje.dinero += price;
-	        		}
-	        		
-		            else {
-		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
-		            }
-	                 break;
+            case 5:  if (Inventario.equiArmas[item-4]==true) {
+			            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+			            }
+			            else if (Inventario.cantArma2>=1) {
+			            		Inventario.cantArma2 -=1;
+			            		Personaje.dinero += price;
+			            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+			            }
+			            else {
+			            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
+			            }
+			             break;
                  
-            case 6:  if (Inventario.cantArma3>=1) {
-	        		Inventario.cantArma3 -=1;
-	        		Personaje.dinero += price;
-	        		}
-	        		
+            case 6:  if (Inventario.equiArmas[item-4]==true) {
+		            	JOptionPane.showMessageDialog(null, "NO PUEDE VENDER UN ITEM EQUIPADO!");
+		            }
+		            else if (Inventario.cantArma3>=1) {
+		            		Inventario.cantArma3 -=1;
+		            		Personaje.dinero += price;
+		            		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
+		            }
 		            else {
 		            	JOptionPane.showMessageDialog(null, "NO POSEE ESTE ITEM!");
 		            }
-	                 break;
+		             break;
                  
             case 7:  if (Inventario.cantIPocima1>=1) {
 	        		Inventario.cantIPocima1 -=1;
 	        		Personaje.dinero += price;
+	        		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
 	        		}
 	        		
 		            else {
@@ -133,6 +162,7 @@ public class Personaje {
             case 8:  if (Inventario.cantIPocima2>=1) {
 	        		Inventario.cantIPocima2 -=1;
 	        		Personaje.dinero += price;
+	        		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
 	        		}
 	        		
 		            else {
@@ -143,6 +173,7 @@ public class Personaje {
             case 9:  if (Inventario.cantIPocima3>=1) {
 	        		Inventario.cantIPocima3 -=1;
 	        		Personaje.dinero += price;
+	        		JOptionPane.showMessageDialog(null, "ITEM VENDIDO!");
 	        		}
 	        		
 		            else {
@@ -154,7 +185,6 @@ public class Personaje {
                      break;
         }
 		System.out.print(Personaje.dinero);
-		
 	}
 	
 	//EQUIPAR

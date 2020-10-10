@@ -26,11 +26,11 @@ public class Item {
 	}
 	
 	//LISTAS PARA ELECCION DEL NOMBRE
-	public static List<String> armaduras = new ArrayList<>(Arrays.asList("Almete","Rajoy","Almofar","Alsebergo","Gambax","Merkel","armadura4","armadura3","armadura2","armadura1","armadura0"));
-	public static List<String> armas = new ArrayList<>(Arrays.asList("Agarth","Xalatath","Dardo","Angrist","Sucsamad","Zinrokh","arma3","arma2","arma1","arma0"));
-	public static List<String> pocimas = new ArrayList<>(Arrays.asList("Celestial","Mineral","Arcanea","Fairy","Mermaid","ogre","algo3","algo2","algo1","algo0"));
+	public static List<String> armaduras = new ArrayList<>(Arrays.asList("Almete","Rajoy","Almofar","Alsebergo","Gambax","Merkel","Brunia","Cota","Gazerant","Pegaso","Seiya"));
+	public static List<String> armas = new ArrayList<>(Arrays.asList("Agarth","Xalatath","Dardo","Angrist","Sucsamad","Zinrokh","AK-47","Galil","TAR-21","AK-48"));
+	public static List<String> pocimas = new ArrayList<>(Arrays.asList("Celestial","Mineral","Arcanea","Fairy","Mermaid","ogre","Mopsus","Chispeante","Quodpot","Doxycida"));
 	
-	//LISTA DE STATS
+	//LISTA DE STAT
 	public static List<String> stats = new ArrayList<>(Arrays.asList("sabiduria","destreza","carisma","fuerza","resitencia"));
 	
 	

@@ -2,6 +2,8 @@ package com.tienda.rpg;
 
 import java.awt.EventQueue;
 
+import javax.swing.JOptionPane;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,7 +12,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class Main {
-	
 	//ITEMS 
 	public static String armadura1;
 	public static String armadura2;
@@ -67,26 +68,12 @@ public class Main {
 				Main.pocima2 = Item.defName(jsonObject8, 1, Item.pocimas);
 				Main.pocima3 = Item.defName(jsonObject9, 2, Item.pocimas);
 				
-				
-				
-				/*EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							InterfazTienda window = new InterfazTienda();
-							window.frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				})*/
-				
 				//EJECUCION DE LA INTERFAZ
 				InterfazTienda.init(jsonObject1, jsonObject2, jsonObject3, jsonObject4, jsonObject5, jsonObject6, jsonObject7, jsonObject8, jsonObject9);
 			} 
 		
 		catch (Exception e) {
-				System.out.print("aqui\n");
-				// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null, "EJECUTE DE NUEVO, ERROR DE CONEXION  CON EL API");
 				System.out.print(e.toString());
 			}
 		
