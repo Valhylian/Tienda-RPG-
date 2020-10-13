@@ -374,6 +374,7 @@ public class Personaje {
 		return 0;
 	}
 
+	//DESEQUIPAR
 	public static void desequipar (int item, JsonObject json) {
 		if (item == 1 || item == 2 || item == 3) {
 				if (Inventario.equiArmaduras[item - 1] == false) {

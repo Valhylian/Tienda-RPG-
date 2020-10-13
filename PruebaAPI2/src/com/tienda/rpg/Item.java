@@ -159,6 +159,7 @@ public class Item {
         }
 	}
 	
+	//MODIFICACION DE STATS (RESTANDO)
 	public static void modStatsInversos (int item, JsonObject json) {
 		switch (item) 
         {
